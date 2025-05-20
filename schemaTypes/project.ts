@@ -9,18 +9,28 @@ export default defineType({
       name: "name",
       title: "Name",
       type: "string",
+      options: {
+        canvasApp: {
+          purpose: "Name of the project",
+        },
+      },
     },
     {
       name: "slug",
       title: "Slug",
       type: "slug",
-      options: { source: "name" },
+      options: { source: "name", canvasApp: { exclude: true } },
     },
     {
       name: "pinned",
       title: "Pinned",
       type: "boolean",
       description: "Pin this article to appear at the top",
+      options: {
+        canvasApp: {
+          purpose: "Pin this project to appear at the top",
+        },
+      },
     },
     {
       name: "description",
@@ -29,6 +39,11 @@ export default defineType({
       validation(rule) {
         return rule.max(80);
       },
+      options: {
+        canvasApp: {
+          purpose: "Short description of the project. Hook the reader to read it. 4-8 words.",
+        },
+      },
     },
     {
       name: "icon",
@@ -36,6 +51,9 @@ export default defineType({
       type: "image",
       options: {
         hotspot: true,
+        canvasApp: {
+          exclude: true,
+        },
       },
     },
     {
@@ -44,6 +62,9 @@ export default defineType({
       type: "image",
       options: {
         hotspot: true,
+        canvasApp: {
+          exclude: true,
+        },
       },
       fields: [
         {
@@ -58,6 +79,11 @@ export default defineType({
       name: "previews",
       title: "Previews",
       type: "array",
+      options: {
+        canvasApp: {
+          exclude: true,
+        },
+      },
       of: [
         {
           name: "image",
@@ -80,6 +106,11 @@ export default defineType({
       name: "technologies",
       title: "Technologies",
       type: "array",
+      options: {
+        canvasApp: {
+          exclude: true,
+        },
+      },
       of: [
         {
           type: "reference",
@@ -111,11 +142,22 @@ export default defineType({
       name: "role",
       title: "Role",
       type: "string",
+      options: {
+        canvasApp: {
+          purpose: "My role in the project",
+        },
+      },
     },
     {
       name: "content",
       title: "Content",
       type: "blockContent",
+      options: {
+        canvasApp: {
+          purpose:
+            "Detailed description of the project, explaining the technologies used, the challenges faced, and the solutions implemented.",
+        },
+      },
     },
   ],
 });

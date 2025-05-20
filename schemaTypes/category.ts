@@ -4,6 +4,11 @@ export default defineType({
   name: "category",
   title: "Category",
   type: "document",
+  options: {
+    canvasApp: {
+      exclude: true,
+    },
+  },
   fields: [
     defineField({
       name: "title",

@@ -4,6 +4,11 @@ export default defineType({
   name: "experience",
   title: "Experiences",
   type: "document",
+  options: {
+    canvasApp: {
+      exclude: true,
+    },
+  },
   fields: [
     {
       name: "icon",

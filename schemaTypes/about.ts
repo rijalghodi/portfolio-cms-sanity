@@ -10,6 +10,11 @@ export default defineType({
       title: "Pinned",
       type: "boolean",
       description: "The latest pinned about will be shown",
+      options: {
+        canvasApp: {
+          exclude: true,
+        },
+      },
     },
     {
       name: "title",
@@ -26,12 +31,21 @@ export default defineType({
       name: "cv",
       title: "CV",
       type: "file",
-      description: "Your latest CV",
+      options: {
+        canvasApp: {
+          exclude: true,
+        },
+      },
     },
     {
       name: "content",
       title: "Content",
       type: "blockContent",
+      options: {
+        canvasApp: {
+          purpose: "A story of myself. Easy to read and understand, SEO friendly, and inspiring.",
+        },
+      },
     },
   ],
 });

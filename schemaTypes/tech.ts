@@ -4,6 +4,11 @@ export default defineType({
   name: "tech",
   title: "Techs",
   type: "document",
+  options: {
+    canvasApp: {
+      exclude: true,
+    },
+  },
   fields: [
     {
       name: "name",

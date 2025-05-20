@@ -14,9 +14,7 @@
     "lint": "npx @biomejs/biome lint .",
     "lint:fix": "npx @biomejs/biome check --write ."
   },
-  "keywords": [
-    "sanity"
-  ],
+  "keywords": ["sanity"],
   "dependencies": {
     "@sanity/code-input": "^5.1.2",
     "@sanity/vision": "^3.88.3",

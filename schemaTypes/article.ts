@@ -26,6 +26,21 @@ export default defineType({
       name: "description",
       title: "Description",
       type: "text",
+      options: {
+        canvasApp: {
+          purpose: "Short description of the article that hook the reader to read it",
+        },
+      },
+    },
+    {
+      name: "content",
+      title: "Content",
+      type: "blockContent",
+      options: {
+        canvasApp: {
+          purpose: "Content of the article. Easy to read and understand, SEO friendly, and engaging.",
+        },
+      },
     },
     {
       name: "cover_image",
@@ -33,6 +48,7 @@ export default defineType({
       type: "image",
       options: {
         hotspot: true,
+        canvasApp: { exclude: true },
       },
       fields: [
         {
@@ -46,11 +62,23 @@ export default defineType({
       name: "tags",
       title: "Tags",
       type: "array",
+      options: {
+        canvasApp: { exclude: true },
+      },
       of: [
         {
           type: "string",
         },
       ],
+    },
+    {
+      name: "category",
+      title: "Category",
+      type: "reference",
+      to: [{ type: "category" }],
+      options: {
+        canvasApp: { exclude: true },
+      },
     },
     {
       name: "date",
@@ -63,11 +91,6 @@ export default defineType({
       type: "boolean",
       description: "Enable table of content?",
       initialValue: true,
-    },
-    {
-      name: "content",
-      title: "Content",
-      type: "blockContent",
     },
   ],
 });
