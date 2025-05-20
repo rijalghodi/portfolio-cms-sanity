@@ -28,7 +28,7 @@ export default defineType({
       description: "Pin this article to appear at the top",
       options: {
         canvasApp: {
-          purpose: "Pin this project to appear at the top",
+          exclude: true,
         },
       },
     },
@@ -127,16 +127,31 @@ export default defineType({
       name: "date",
       title: "Date",
       type: "date",
+      options: {
+        canvasApp: {
+          exclude: true,
+        },
+      },
     },
     {
       name: "demo_link",
       title: "Demo Link",
       type: "url",
+      options: {
+        canvasApp: {
+          exclude: true,
+        },
+      },
     },
     {
       name: "source_link",
       title: "Source Link",
       type: "url",
+      options: {
+        canvasApp: {
+          exclude: true,
+        },
+      },
     },
     {
       name: "role",
@@ -144,7 +159,7 @@ export default defineType({
       type: "string",
       options: {
         canvasApp: {
-          purpose: "My role in the project",
+          exclude: true,
         },
       },
     },

@@ -14,13 +14,18 @@ export default defineType({
       name: "slug",
       title: "Slug",
       type: "slug",
-      options: { source: "title" },
+      options: { source: "title", canvasApp: { exclude: true } },
     },
     {
       name: "pinned",
       title: "Pinned",
       type: "boolean",
       description: "Pin this article to appear at the top",
+      options: {
+        canvasApp: {
+          exclude: true,
+        },
+      },
     },
     {
       name: "description",
@@ -84,6 +89,11 @@ export default defineType({
       name: "date",
       title: "Date",
       type: "date",
+      options: {
+        canvasApp: {
+          exclude: true,
+        },
+      },
     },
     {
       name: "toc",
@@ -91,6 +101,11 @@ export default defineType({
       type: "boolean",
       description: "Enable table of content?",
       initialValue: true,
+      options: {
+        canvasApp: {
+          exclude: true,
+        },
+      },
     },
   ],
 });

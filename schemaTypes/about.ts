@@ -20,12 +20,22 @@ export default defineType({
       name: "title",
       title: "Title",
       type: "string",
+      options: {
+        canvasApp: {
+          exclude: true,
+        },
+      },
     },
     {
       name: "date",
       title: "Date",
       type: "date",
       description: "Date you write this about",
+      options: {
+        canvasApp: {
+          exclude: true,
+        },
+      },
     },
     {
       name: "cv",
